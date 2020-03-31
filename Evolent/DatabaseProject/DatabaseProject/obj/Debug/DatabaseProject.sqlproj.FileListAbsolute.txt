@@ -1,0 +1,9 @@
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.dacpac
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.dll
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.pdb
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\obj\Debug\Model.xml
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\obj\Debug\refactor.xml
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\obj\Debug\postdeploy.sql
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\obj\Debug\predeploy.sql
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.dll
+D:\my doc\Educational\Evolent\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
