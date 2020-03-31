@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+
+<div id="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-5">
+                <p class="text-header">Your Contacts</p>
+                <div id="divUserContacts">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    window.onload = function () {
+        var objDashboardView = new DashboardView();
+    }
+</script>

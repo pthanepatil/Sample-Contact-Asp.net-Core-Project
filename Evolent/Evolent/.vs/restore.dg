@@ -1,0 +1,6 @@
+#:D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Business\Evolent.Business.xproj
+D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Business\Evolent.Business.xproj|D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Models\Evolent.Models.xproj
+#:D:\my doc\Educational\Evolent\EvolentContact.API\src\Web\Web.xproj
+D:\my doc\Educational\Evolent\EvolentContact.API\src\Web\Web.xproj|D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Business\Evolent.Business.xproj
+D:\my doc\Educational\Evolent\EvolentContact.API\src\Web\Web.xproj|D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Models\Evolent.Models.xproj
+D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Business\Evolent.Business.xproj|D:\my doc\Educational\Evolent\EvolentContact.API\src\Evolent.Models\Evolent.Models.xproj

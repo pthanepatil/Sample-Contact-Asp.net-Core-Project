@@ -1,0 +1,47 @@
+﻿@model Web.ViewModels.ContactsViewModel
+
+<div class="">
+    @if (Model != null && Model.Contacts != null && Model.Contacts.Count() >= 0)
+    {
+        <table id="contactlist" class="contactlist">
+            <tr>
+                <th class="text-underline">First Name</th>
+                <th class="text-underline">Last Name</th>
+                <th class="text-underline">Phone Number</th>
+                <th class="text-underline">Email</th>
+                <th class="text-underline">Status</th>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var details in Model.Contacts)
+            {
+                <tr>
+                    <td>@details.FirstName</td>
+                    <td>@details.LastName</td>
+                    <td>@details.PhoneNumber</td>
+                    <td>@details.Email</td>
+                    <td>@((details.Status) ? "Active" : "In Active")</td>
+                    <td>
+                        <a asp-controller="DashBoard" asp-action="EditContact" asp-route-encryptedContactId="@Web.Common.EncryptDecryptAlgorithm.Encrypt(details.ContactId.ToString())"
+                           class="pointer">Edit</a>
+                    </td>
+                    <td>
+                        @if (details.Status)
+                        {
+                            <a asp-controller="DashBoard" asp-action="DeleteContact" asp-route-encryptedContactId="@Web.Common.EncryptDecryptAlgorithm.Encrypt(details.ContactId.ToString())"
+                               class="pointer">Delete</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+
+        @Html.Partial("_GridPager", Model.Pager)
+    }
+    else
+    {
+        <div class="text-center">
+            <p>No Contacts</p>
+        </div>
+    }
+</div>

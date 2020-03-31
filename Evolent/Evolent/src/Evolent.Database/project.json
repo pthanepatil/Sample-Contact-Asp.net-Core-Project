@@ -1,0 +1,14 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Evolent.Models": "1.0.0-*",
+    "Microsoft.Data.Sqlite": "1.0.0"
+  },
+
+  "frameworks": {
+    "net461": {
+      "imports": "dnxcore50"
+    }
+  }
+}

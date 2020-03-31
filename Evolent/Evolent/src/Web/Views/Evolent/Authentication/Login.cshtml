@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "My.Portal";
+    //Layout = "~/Features/Shared/Views/_Layout.cshtml";
+}
+
+@model Evolent.Models.UserRequest
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>My.Portal</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="~/css/Authentication/normalize.css">
+    <link rel="stylesheet" href="~/css/Authentication/style.css">
+    <link rel="stylesheet" href="~/css/Authentication/font-awesome.min.css" />
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="~/images/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="row logo">
+            <h1>My<i class="fa fa-circle"></i>Portal</h1>
+        </div>
+
+        <div class="row hero">
+            <div id="login" class="column login-form">
+                <h1>Evolent Health Login</h1>
+
+                <div id="failureDiv" class="alert alert-danger alert-dismissable text-center">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <strong>Login Failure ! </strong> Invalid Credentials.
+                </div>
+
+                <form asp-controller="Authentication" asp-action="Login" name="LoginForm" method="post" class="form-horizontal" data-toggle="validator">
+                    @Html.AntiForgeryToken()
+                    <label for="inputEmail" class="label-hide">User Name</label>
+                    <input asp-for="UserName" type="text" id="inputEmail" class="form-control" placeholder="User Name" autocomplete="off" maxlength="20" tabindex="1" required />
+                    <label for="inputPassword" class="label-hide">Password</label>
+                    <input asp-for="Password" type="password" id="inputPassword" class="form-control" maxlength="50" autocomplete="off" placeholder="Password" tabindex="2" required />
+                    <div class="group">
+                        <input id="check" asp-for="RememberMe" class="check" type="checkbox" checked="" tabindex="3">
+                        <label for="check"><span class="icon"></span> Remember Me</label>
+                    </div>
+                    <button class="button-red" type="submit">Sign in</button>
+                </form>
+            </div>
+        </div>
+        <div class="row footer">
+        </div>
+    </div>
+
+    @*Load the scripts*@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/CommonFunctions.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap-validator/js/validator.js"></script>
+    
+</body>
+</html>
+
+
+
+
+@if (ViewBag.LoginStatus != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            var x = document.getElementById("inactiveUserDiv");
+            var y = document.getElementById("failureDiv");
+            if ("@ViewBag.LoginStatus" == "ERROR") {
+                //x.style.display = "none";
+                y.style.display = "block";
+            }
+        };
+    </script>
+}

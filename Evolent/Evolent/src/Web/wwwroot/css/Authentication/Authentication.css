@@ -1,0 +1,319 @@
+﻿/*#region Signin Signup*/
+
+#createprofile {
+    padding-bottom: 40px;
+}
+
+#login {
+    padding-bottom: 40px;
+}
+
+#successDiv, #failureDiv, #warningDiv, #warningUENExists, #inactiveUserDiv {
+    display: none;
+}
+
+.forgotPwdPadding {
+    height: 4vh;
+}
+
+.forgotSpacer {
+    padding: 0px 10px 0px 10px;
+}
+
+.signupTopPadding {
+    height: 5vh;
+}
+
+.left-align-for-signup {
+    padding-top: 88px;
+}
+
+.signinTopPadding {
+    height: 12vh;
+    left: 45%;
+    position: relative;
+    margin: 20px 0 -10px 0;
+}
+
+.signupBorder {
+    border: 1px solid #e3e3e3;
+    border-radius: 1%;
+    box-shadow: 0px 0px 3px 2px #ececec !important;
+}
+
+.loginborder {
+    border: 1px solid #e3e3e3;
+    border-radius: 1%;
+    box-shadow: 0px 0px 3px 2px #ececec !important;
+}
+
+.login-header h2 {
+    font-family: Harabara;
+    font-size: 50pt !important;
+    letter-spacing: 0.1em;
+    text-shadow: 4px 8px 2px #ccc;
+    margin-bottom: 0px;
+}
+
+.login-slogan h4 {
+    font-family: Calibri;
+    font-size: 12pt;
+    letter-spacing: 0.05em;
+    text-shadow: 0.5px 1px #ccc;
+    margin-bottom: 24px;
+}
+
+.login-signup {
+    /*background-image: url("../../images/login_signup.png");*/
+    background-color: #bb2121 !important;
+    height: 415px;
+    color: white;
+}
+
+#primaryTextButton {
+    /*background-color: #f6bb42;*/
+    background-color: #fff !important;
+    color: black;
+    border: none !important;
+}
+
+    #primaryTextButton:hover {
+        background-color: #454546 !important;
+        color: #fff !important;
+    }
+
+.login_btn .btn {
+    border-radius: 0px;
+    /*width: 10% !important;*/
+    text-align: center;
+    letter-spacing: 0.1em;
+    /*font-weight: bold;*/
+}
+
+.login_btn label {
+    /*font-family: Roboto, Helvetica, Arial, Lucida, sans-serif !important;*/
+    font-weight: normal !important;
+    font-size: smaller;
+}
+
+.login_signup label {
+    /*font-family: Roboto, Helvetica, Arial, Lucida, sans-serif !important;*/
+    font-size: small;
+}
+
+.login-signup .k-button {
+    padding: 8px 15px;
+}
+
+.login_btn input, select, textarea {
+    /*max-width: 55%;*/
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-box {
+    padding: 25px 20px 50px 20px;
+}
+
+/*.required {  
+  color:red;
+  padding-left: 2px;
+}*/
+
+.login_box_input {
+    height: 27px;
+    border: 0;
+    width: 60%;
+    margin-left: 1px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: -7px 10px 0px -7px #ebebeb, 7px 10px 0px -7px #FAF8F7;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+    .login_box_input:focus {
+        outline: none;
+        box-shadow: -7px 10px 0px -7px #C0392B, 7px 10px 0px -7px #FAF8F7;
+    }
+
+.btn-block {
+    display: block;
+    width: 65% !important;
+    padding-left: 35px;
+}
+
+.helptext {
+    /*font-family: Roboto, Helvetica, Arial, Lucida, sans-serif !important;*/
+    font-weight: 500;
+    font-size: smaller;
+    font-style: italic;
+    padding-left: 2px;
+}
+
+.classicSelect {
+    /* Remove default caret */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Custome Style for new caret */
+    /*background-image:
+    linear-gradient(45deg, transparent 50%, #575555 50%),
+    linear-gradient(135deg, #575555 50%, transparent 50%),
+    linear-gradient(to right, #A4A4A4, #A4A4A4);*/
+    background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(to right, #454546, #454546) !important;
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 3.5em 3.5em;
+    background-repeat: no-repeat;
+}
+
+.pwMatch {
+    color: #FF0004;
+}
+
+input[type=checkbox] + label {
+    display: block;
+    padding-left: 20% !important;
+}
+
+.RememberMeChk {
+    display: block !important;
+    opacity: 0 !important;
+}
+
+.btn:active:focus:hover:disabled {
+    color: #333 !important;
+    background-color: transparent !important;
+}
+
+/*#endregion Signin Signup*/
+
+/*#region Edit Profile*/
+
+.editProfileTopPadding {
+    height: 4vh;
+}
+
+.userNameLabel {
+    background-color: #F3F3F3;
+    height: 40px !important;
+}
+
+.spacerLeftRight {
+    margin: 20px 20px 0px 20px;
+}
+
+.profileBox {
+    border-top: 3px solid #447bfb !important;
+    border: 1px solid #ccc;
+    margin: 10px 15px 40px;
+}
+
+.row.vdivide [class*='col-']:not(:last-child):after {
+    background: #e0e0e0;
+    width: 1px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 70px;
+}
+
+.spacer {
+    height: 20px;
+}
+
+.spacer-2 {
+    height: 60px;
+}
+
+/*.btnWidth {
+    max-width: 100px;
+    min-width: 85px;
+}*/
+
+.uploadPhoto {
+    /*background: url("../../images/edit_profile.png") 0px -5px no-repeat;*/
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 68px !important;
+    right: 0;
+    bottom: -16px;
+    z-index: 500000;
+    cursor: pointer;
+}
+
+    .uploadPhoto input {
+        display: none !important;
+    }
+
+input[type="file"].uploadPhoto {
+    display: none !important;
+}
+
+.edit-profile {
+    padding-top: 35px;
+}
+
+.v_line {
+    border-right: 1px solid #ccc;
+}
+
+.emp-box {
+    background-color: #eaeaea;
+    padding: 5px 10px;
+    margin: 10px -25px;
+}
+
+    .emp-box h4 {
+        color: #04558E;
+    }
+
+    .emp-box label {
+        margin-bottom: 0px;
+    }
+
+.usr_logout img {
+    display: inline-block;
+}
+
+.usr_logout .dropdown-menu {
+    right: 0px;
+    left: auto;
+}
+
+.usr_logout a {
+    padding-top: 0px !important;
+}
+
+.userCustomBottom {
+    padding-bottom: 1px !important;
+}
+
+/*#endregion Edit Profile*/
+
+/*#lblWelcomeUserName {
+    padding-top: 5px !important;
+}*/
+
+/*Start Access Denied Page*/
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+    .error-actions .btn {
+        margin-right: 10px;
+    }
+
+/*End Access Denied Page*/

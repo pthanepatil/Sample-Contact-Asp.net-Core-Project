@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    @*<link href="~/lib/kendo-ui/styles/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/kendo-ui/styles/kendo.bootstrap.min.css" rel="stylesheet" />*@
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="siteBackColor">
+  
+    @*Body section*@
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+
+  
+    @*Load the scripts*@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/CommonFunctions.js" asp-append-version="true"></script>
+    @*<script src="~/lib/kendo-ui/js/kendo.ui.core.min.js"></script>*@
+    <script src="~/lib/bootstrap-validator/js/validator.js"></script>
+    @*<script src="~/js/CommonFunctions.js"></script>*@
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

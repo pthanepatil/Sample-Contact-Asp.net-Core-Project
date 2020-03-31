@@ -1,0 +1,52 @@
+﻿<link href="~/css/Authentication/Authentication.css" rel="stylesheet" />
+
+<base href="@Url.Content("~/")">
+<div id="dashboardNavBar" style="height:25px;">
+    <nav class="navbar navbar-inverse navbar-fixed-top header dashboardHeader" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" id="anchCompLogo" asp-controller="Dashboard" asp-action="Index" class="navbar-brand">@(string.IsNullOrEmpty(ViewBag.CompanyName) ? "My.Portal" : ViewBag.CompanyName)</a>
+            </div>
+            <div id="dashHeader" class="navbar-collapse collapse dashboardHeader-padding">
+                <ul class="nav navbar-nav">
+                    <li class="iconHome @((ViewBag.SelectedMenu == Evolent.Models.Shared.Constants.AppMenus.HOME) ? "active" : null )">
+                        <a asp-controller="Dashboard" asp-action="Index" class="dropdown-toggle">Home</a>
+                    </li>
+
+                    <li class="iconHome dropdown @((ViewBag.SelectedMenu == Evolent.Models.Shared.Constants.AppMenus.ADD_CONTACT) ? "active" : null ) ">
+                        <a asp-controller="Dashboard" asp-action="AddContact" class="dropdown-toggle">Add Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="padding-top5per"><a id="lblWelcomeUserName" title="@(ViewBag.DisplayName)" class="label-italic medium-font a-decorationNone">Welcome @(ViewBag.DisplayName)!</a></div>
+                    </li>
+                    <li class="iconNotification">
+                        <a asp-area="" asp-controller="Alerts" asp-action="Index" class="@((ViewBag.PendingNotificationsCount > 0) ? null : "height45px" )">
+                            @if (ViewBag.PendingNotificationsCount != null && ViewBag.PendingNotificationsCount > 0)
+                            {
+                                <span id="spnNotification" class="badge">@(ViewBag.PendingNotificationsCount)</span>
+                            }
+                        </a>
+                    </li>
+                    <li class="dropdown usr_logout dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img alt="Profile" src="~/images/user_not_login.png" class="img-circle" width="40" height="40" />
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dashboardMenuItems">
+                            <li><a asp-area="" asp-controller="Authentication" asp-action="Logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+</div>

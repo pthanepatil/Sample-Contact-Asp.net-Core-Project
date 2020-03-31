@@ -1,0 +1,113 @@
+﻿@model Web.ViewModels.ContactViewModel
+
+@{
+    ViewBag.Title = (ViewBag.SelectedMenu == Evolent.Models.Shared.Constants.AppMenus.EDIT_CONTACT) ? "Edit Contact" : "Add Contact";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+
+<div id="container">
+    <div class="">
+        <div class="col-sm-6">
+
+            @if (ViewBag.SelectedMenu == Evolent.Models.Shared.Constants.AppMenus.EDIT_CONTACT)
+            {
+                <h3>Edit Contact</h3>                
+            }
+            else
+            {
+                <h3>Add Contact</h3>
+            }
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div id="failureDiv" class="alert alert-danger alert-dismissable text-center" style='@((string.IsNullOrEmpty(ViewBag.Message))?"display:none":"display:block")'>
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                        <strong>@ViewBag.Message </strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="alert alert-danger alert-dismissable text-center" style='text-align:left; @((ViewBag.HasModelError)?"display:block":"display:none")'>
+                        @Html.ValidationSummary()
+                    </div>
+                </div>
+            </div>
+
+            <form asp-controller="Dashboard" asp-action="AddContact" id="form-contact" name="AddContact" method="post" class="form-horizontal">
+                @Html.AntiForgeryToken()
+                <input asp-for="encryptedContactId" id="hdnContactId" type="hidden" />
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="inputFirstName">First Name</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input asp-for="FirstName" id="inputFirstName" type="text" class="form-control" placeholder="First Name" autocomplete="off" maxlength="20" tabindex="1" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="inputLastName">Last Name</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input asp-for="LastName" id="inputLastName" type="text" class="form-control" placeholder="Last Name" autocomplete="off" maxlength="20" tabindex="2" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="inputPhoneNumber">Phone No.</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input asp-for="PhoneNumber" id="inputPhoneNumber" type="text" class="form-control" placeholder="Phone Number" autocomplete="off" maxlength="15" tabindex="3" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="inputEmail">Email</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input asp-for="Email" id="inputEmail" type="text" class="form-control" placeholder="Email" autocomplete="off" maxlength="50" tabindex="4" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label>Active/InActive</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input id="chkStatus" asp-for="Status" class="check" type="checkbox" checked="" tabindex="5">
+                        <label for="chkStatus"><span class="icon"></span> </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary" type="submit">Save</button>
+
+                        <a asp-controller="Dashboard" asp-action="Index" class="btn btn-primary">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    input[type=checkbox] + label {
+        display: inline;
+        padding-left: 2% !important;
+    }
+
+    #form-contact .row {
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+</style>
+
+<script>
+    window.onload = function () {
+        var objDashboardView = new DashboardView();
+    }
+</script>
