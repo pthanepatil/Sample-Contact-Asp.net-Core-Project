@@ -10,4 +10,4 @@ Below are uploaded files for verification:
 These are only manual configurations to be done for project to run.
 
 Thanks,
-Padmaraj
+Padmaraj Thanepatil
